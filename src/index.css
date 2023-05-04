@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-raleway: "Raleway", sans-serif;
+}
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+  font-family: var(--font-roboto);
+  /* background-color: #212426; */
+}
+
+
+
+.logo img {
+  height: 70px;
+  width: 120px;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* overflow: visible; */
+  background: #0c2461;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+}
+
+.nav-detail {
+  display: flex;
+}
+
+.nav-detail a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px 20px;
+}
+
+/* ===============================================nav-end */
+
+h1{
+  margin: 10px auto;
+  text-align: center;
+}
+
+.header{
+  margin: 50px auto;
+  /* text-align: center; */
+  font-family: var(--font-roboto);
+}
+
+.home{
+  width: 100vw;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anime-style{
+  display: flex;
+}
+
+.anime{
+  width: 250px;
+  margin: 3rem;
+
+  position: relative;
+  border-radius: 12px;
+  /* border-top-right-radius: 20px; */
+  /* overflow: hidden; */
+  border: none;
+
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  box-shadow: 0px 16px 15px -7px rgba(0, 0, 0, 0.1);
+}
+
+.anime h4{
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.anime img{
+  height: 300px;
+  width: 100%;
+}
+
+.anime:hover{
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05, 1.05);
+}
+
+.anime:nth-of-type(3) h3 {
+  margin-top: 5px;
+  font-family: "Roboto Slab", serif;
+  color: #f9d3b4;
+}
+
+
+
+/* ===================loader div============================= */
+
+.loader-div{
+  width: 100vw;
+  height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-self: center;
+ margin-top: 100px;
+}
+
+.loader{
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.loader-msg{
+  border-right: 3px solid  #000;
+  border-radius: 50%;
+  animation: loading 2s linear infinite;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader h3 {
+  color: #000;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ============================================================================= */
+
+/* ===========================anime-details-component========= */
+
+p{
+  font-family: var(--font-raleway);
+  word-spacing: 10px;
+}
+
+.anime-full-details {
+  display: flex;
+}
+
+.anime-poster {
+  margin: 20px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.anime-content{
+  margin: 20px;
+}
+
+.anime-content h4 {
+  padding-bottom: 20px;
+}
+
+.anime-content span {
+  color: green;
+}
+/* ===================================================== */
+
+/* ===================================animelist component========== */
+.anime-list {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  column-gap: 50px;
+  /* row-gap: 10px; */
+}
+
+.anime-title h4 {
+  text-decoration: none;
+}
+
+/* ======================================================== */
+
+/* ======================media-queries====================== */
+
+@media screen and (max-width: 600px) {
+  .logo img{
+    height: 30px;
+    width: 80px;
+  }
+
+  .anime-list{
+    display: grid;
+    grid-template-columns: 300px;
+  }
+
+  .anime-full-details {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nav-detail{
+    font-size: 10px;
+  }
+}
+
